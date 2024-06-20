@@ -41,12 +41,3 @@ class Rab(Base):
 
 
 
-async def models_main():
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
-        
-        
-        async with async_session() as session:
-            department = Department(name = 'Marketing')
-            session.add(department)
-            await session.commit()

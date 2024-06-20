@@ -96,8 +96,13 @@ def main():
         links = get_links(html) 
         for link in links:
             detail_html = get_html(url=link)
-            data.append(get_posts(html=detail_html))
-
+            data.append(get_address(html=detail_html))
+            data.append(get_area(html=detail_html))
+            data.append(get_name(html=detail_html))
+            data.append(get_description(html=detail_html))
+            data.append(get_details(html=detail_html))
+            data.append(get_param(html=detail_html))
+            data.append(get_price(html=detail_html))
 
 if __name__ == '__main__':
     main()

@@ -21,10 +21,10 @@ async def start(message:Message):
     await message.answer(description, reply_markup=keyboard)
 
 
-@router.message(F.text == 'Вывести цену')
-async def price(message:Message):
-    await message.answer(get_price)
+# @router.message(F.text == 'Вывести цену')
+# async def price(message:Message):
+#     await message.answer(get_price)
 
-@router.message(F.text == 'Вывести название')
-async def name(message:Message):
-    await message.answer(get_)
+# @router.message(F.text == 'Вывести название')
+# async def name(message:Message):
+#     await message.answer(get_)
